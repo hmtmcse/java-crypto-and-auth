@@ -11,6 +11,16 @@ repositories {
     mavenCentral()
 }
 
+jar{
+    manifest {
+        attributes (
+                'Implementation-Title': 'HMTM Crypto and Authentication Helper',
+                'Implementation-Version': version,
+                'Main-Class': 'com.hmtmcse.caa.CryptoAuthException.JavaJWTMain'
+        )
+    }
+}
+
 dependencies {
     compile project(':java-date-time-util')
     compile 'com.auth0:java-jwt:3.8.1'
