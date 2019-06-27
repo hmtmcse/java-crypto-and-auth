@@ -9,6 +9,6 @@ public class JwtCustomClock implements Clock {
 
     @Override
     public Date getToday() {
-        return TMDateTimeUtilJ7.localToUTC(new Date());
+        return new Date();
     }
 }

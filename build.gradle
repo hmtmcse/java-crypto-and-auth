@@ -12,11 +12,14 @@ repositories {
 }
 
 jar{
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
     manifest {
         attributes (
                 'Implementation-Title': 'HMTM Crypto and Authentication Helper',
                 'Implementation-Version': version,
-                'Main-Class': 'com.hmtmcse.caa.CryptoAuthException.JavaJWTMain'
+                'Main-Class': 'com.hmtmcse.caa.jwt.JavaJWTMain'
         )
     }
 }

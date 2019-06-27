@@ -122,13 +122,13 @@ public class JavaJWT {
 
     public JavaJWT tokenValidUntilUTCMinutes(Integer minutes) {
         TMDateHelper tmDateHelper = new TMDateHelper();
-        tokenBuilder.withExpiresAt(TMDateTimeUtilJ7.localToUTC(tmDateHelper.adjustCurrentDateWithMinute(minutes)));
+        tokenBuilder.withExpiresAt(tmDateHelper.adjustCurrentDateWithMinute(minutes));
         return this;
     }
 
     public JavaJWT tokenValidUntilUTCHours(Integer hour) {
         TMDateHelper tmDateHelper = new TMDateHelper();
-        tokenBuilder.withExpiresAt(TMDateTimeUtilJ7.localToUTC(tmDateHelper.adjustCurrentDateWithHour(hour)));
+        tokenBuilder.withExpiresAt(tmDateHelper.adjustCurrentDateWithHour(hour));
         return this;
     }
 
