@@ -15,7 +15,7 @@ jar{
     manifest {
         attributes (
                 'Implementation-Title': 'HMTM Crypto and Authentication Helper',
-                'Implementation-Version': version,
+                'Implementation-Version': archiveVersion,
                 'Main-Class': 'com.hmtmcse.caa.jwt.JavaJWTMain'
         )
     }
@@ -31,6 +31,6 @@ dependencies {
             compile project(":" + it)
         }
     }
-    compile 'com.auth0:java-jwt:3.8.1'
+    compile 'com.auth0:java-jwt:3.10.0'
 }
 

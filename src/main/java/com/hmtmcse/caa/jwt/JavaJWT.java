@@ -114,6 +114,7 @@ public class JavaJWT {
             JWTVerifier verifier = verification.build(new JwtCustomClock());
             return verifier.verify(token);
         } catch (JWTCreationException exception) {
+            exception.printStackTrace();
             throw new CryptoAuthException(exception.getMessage());
         }
     }
